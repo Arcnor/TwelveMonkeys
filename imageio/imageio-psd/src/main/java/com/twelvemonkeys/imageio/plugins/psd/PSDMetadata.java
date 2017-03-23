@@ -800,7 +800,7 @@ public final class PSDMetadata extends AbstractMetadata {
                 header.mode == PSD.COLOR_MODE_CMYK & header.channels > 4;
     }
 
-    <T extends PSDImageResource> Iterator<T> getResources(final Class<T> resourceType) {
+    public <T extends PSDImageResource> Iterator<T> getResources(final Class<T> resourceType) {
         // NOTE: The cast here is wrong, strictly speaking, but it does not matter...
         @SuppressWarnings({"unchecked"})
         Iterator<T> iterator = (Iterator<T>) imageResources.iterator();
@@ -826,6 +826,10 @@ public final class PSDMetadata extends AbstractMetadata {
                 return false;
             }
         });
+    }
+
+    public List<PSDLayerInfo> getLayerInfo() {
+        return layerInfo;
     }
 
     @Override

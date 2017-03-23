@@ -40,7 +40,7 @@ import java.util.Arrays;
  * @author last modified by $Author: haraldk$
  * @version $Id: PSDLayerInfo.java,v 1.0 Apr 29, 2008 6:01:12 PM haraldk Exp$
  */
-final class PSDLayerInfo {
+public final class PSDLayerInfo {
     final int top;
     final int left;
     final int bottom;
@@ -161,11 +161,11 @@ final class PSDLayerInfo {
         }
     }
 
-    String getLayerName() {
+    public String getLayerName() {
         return unicodeLayerName != null ? unicodeLayerName : layerName;
     }
 
-    int getLayerId() {
+    public int getLayerId() {
         return layerId;
     }
 

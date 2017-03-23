@@ -202,6 +202,14 @@ public class PSDImageResource {
                 return new PSDPixelAspectRatio(id, pInput);
             case PSD.RES_PRINT_FLAGS_INFORMATION:
                 return new PSDPrintFlagsInformation(id, pInput);
+            case PSD.RES_INDEX_OF_TARGET_LAYER:
+                return new PSDIndexOfTargetLayer(id, pInput);
+            case PSD.RES_LAYER_SELECTION_IDS:
+                return new PSDLayerSelectionIds(id, pInput);
+            case PSD.RES_LAYER_GROUPS_ENABLED:
+                return new PSDLayerGroupsEnabled(id, pInput);
+            case PSD.RES_LAYERS_GROUP_INFO:
+                return new PSDLayersGroupInfo(id, pInput);
             default:
                 if (id >= PSD.RES_PATH_INFO_MIN && id <= PSD.RES_PATH_INFO_MAX) {
                     return new PSDPathResource(id, pInput);
